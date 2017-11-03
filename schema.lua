@@ -26,7 +26,7 @@ return {
 			type = "boolean",
 			default = false,
 			required = false
-		}
+		},
 		stream_name = {
 			type = "string",
 			required = true
