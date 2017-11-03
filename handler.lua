@@ -85,7 +85,6 @@ function plugin:access(config)
     access_key = config.aws_key,
     secret_key = config.aws_secret,
   }
-  ngx.log(ngx.DEBUG, "AWS Request: "..cjson.encode(opts))
 
   if config.aws_debug then
     ngx.log(ngx.DEBUG, "AWS Request: "..cjson.encode(opts))
