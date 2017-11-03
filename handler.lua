@@ -76,7 +76,7 @@ function plugin:access(config)
     service = "firehose",
     method = "POST",
     headers = {
-      ["X-Amz-Target"] = "Firehose_20131202.PutRecord",
+      ["X-Amz-Target"] = "Firehose_20150804.PutRecord",
       ["Content-Type"] = "application/x-amz-json-1.1",
       ["Content-Length"] = tostring(#bodyJson)
     },
