@@ -66,7 +66,7 @@ function plugin:access(config)
   local body = {
     DeliveryStreamName = config.stream_name,
     Record = {
-	    Data: ngx.encode_base64(dataJson)
+	    Data = ngx.encode_base64(dataJson)
 	}
   }
   local bodyJson = cjson.encode(body)
