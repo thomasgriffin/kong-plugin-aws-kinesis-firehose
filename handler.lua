@@ -66,7 +66,7 @@ function plugin:access(config)
   local body = {
     DeliveryStreamName = config.stream_name,
     Record = {
-	    Data = ngx.encode_base64(dataJson) .. "\n"
+	    Data = ngx.encode_base64(dataJson).."\n"
 	}
   }
   local bodyJson = cjson.encode(body)
@@ -85,6 +85,7 @@ function plugin:access(config)
     access_key = config.aws_key,
     secret_key = config.aws_secret,
   }
+  ngx.log(ngx.DEBUG, "AWS Request: "..cjson.encode(opts))
 
   if config.aws_debug then
     ngx.log(ngx.DEBUG, "AWS Request: "..cjson.encode(opts))
