@@ -54,6 +54,9 @@ function plugin:access(config)
   end
   local dataJson = cjson.encode(data)
 
+  ngx.say(dataJson)
+  ngx.exit(200)
+
   -- set partition key
   local partition_key
   if config.partition_key_path then
