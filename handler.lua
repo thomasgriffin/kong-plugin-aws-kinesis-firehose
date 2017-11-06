@@ -54,6 +54,7 @@ function plugin:access(config)
   end
   local dataJson = cjson.encode(data)
 
+  ngx.say(data)
   ngx.say(dataJson)
   ngx.exit(202)
 
